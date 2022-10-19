@@ -1,0 +1,24 @@
+@import '../lib/bootstrap/scss/bootstrap.scss';
+@import "./navbar";
+@import "./home";
+
+#flights {
+    background-color: #ddd;
+    input[type="date"] {
+        min-width: 13rem;
+    }
+    input[type="date"]:before {
+        content: attr(placeholder) !important;
+        color: $primary;
+        margin-right: 0.5em;
+    }
+    input[type="date"]:focus:before,
+    input[type="date"]:valid:before {
+        content: "";
+    }
+    button {
+        @include media-breakpoint-up(md) {
+            width: 23.5% !important;
+        }
+    }
+}
